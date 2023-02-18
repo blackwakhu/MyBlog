@@ -1,0 +1,68 @@
+textarea{
+    width: 100%;
+    resize: vertical;
+    height: 400px;
+    min-height: 390px;
+}
+.header *{
+    display: inline;
+}
+.header li{
+    margin: 20px;
+}
+.header li a{
+    color: white;
+    text-decoration: none;
+}
+.header{
+    background-color: grey;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 5px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 25px 0 black;
+}
+#author, #title, #email, #content, #submit, #doc-body, #username, #passwd, #security_question, #answer, #subject{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#author, #title, #email, #content, #submit, #username, #passwd, #security_question, #answer, #subject{
+    font-size: 35px;
+}
+#doc-body{
+    font-size: 20px;
+}
+.single-data{
+    padding: 5px;
+}
+#author, #title, #email, #username, #passwd, #security_question, #answer, #content, #subject{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+#author, #title, #email, #username, #passwd, #security_question, #answer, #subject{
+    width: 50%;
+    height: 40px;
+}
+label, #submit, .home_title, .home_author{
+    text-transform: capitalize;
+}
+#submit{
+    width: 100px;
+    height: 40px;
+}
+.content{
+    background-color: transparent;
+}
+.content-block{
+    padding: 50px;
+}
+.home_subject{
+    text-transform: uppercase;
+}
+body{
+    background-color: pink;
+}
+

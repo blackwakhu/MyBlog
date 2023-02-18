@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}by {{ subject_title }}{% endblock %}
+
+{% block body %}
+<h1>Subject: {{ subject_title }}</h1>
+<ul>
+{% for i in subject_matter %}
+    <fieldset>
+        <legend>{{ i['title'] }}</legend>
+        <dl>
+            <dt>{{ i['author'] }}</dt>
+            <dd>{{ i['content'][:100] }}... <a href="{{url_for('blog.detail', blog_id=i['_id'])}}">read more</a></dd>
+        </dl>
+    </fieldset>
+{% endfor %}
+</ul>
+{% endblock %}

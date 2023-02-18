@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %} Subjects {% endblock %}
+
+{% block body %}
+    <h1>Subjects</h1>
+    <ul>
+        {% for subject in subjects %}
+            <li><a href="{{url_for('blog.subject_works', subject_title=subject)}}" title="Related blogs">{{ subject }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

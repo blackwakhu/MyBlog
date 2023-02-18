@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta about="this is a blog website">
+    <title>Blogs: {% block title %}{% endblock %}</title>
+    <link href="{{url_for('static', filename='css/style.css')}}" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        {% include "header.html" %}
+    </header>
+
+    <div class="content">
+        <div class="content-block">
+            {% block body %}{% endblock %}
+        </div>
+    </div>
+
+    <footer>
+        {% include "footer.html" %}
+    </footer>
+</body>
+</html>

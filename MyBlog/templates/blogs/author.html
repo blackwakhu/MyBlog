@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}authors{% endblock %}
+
+{% block body %}
+    <h1>Authors</h1>
+    <table>
+        <tr>
+            <th>author</th>
+            <th>username</th>
+            <th>email</th>
+        </tr>
+        {% for author in authors %}
+            <tr>
+                <td><a href="{{url_for('blog.author_works', author_name=author.name)}}">{{ author.name }}</a></td>
+                <td>{{ author.username }}</td>
+                <td>{{ author.email }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

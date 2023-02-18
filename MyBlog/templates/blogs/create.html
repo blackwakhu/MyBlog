@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %} create {% endblock %}
+
+{% block body %}
+    <form method="post">
+        {{ form.hidden_tag() }}
+        {{ form.author.label }}<br>{{ form.author() }}<br>
+        {{ form.username.label }}<br>{{ form.username() }}<br>
+        {{ form.passwd.label }}<br>{{ form.passwd() }}<br>
+        {{ form.security_question.label }}<br>{{ form.security_question() }}<br>
+        {{ form.answer.label }}<br>{{ form.answer() }}<br>
+        {{ form.email.label }}<br>{{ form.email() }}<br>
+        {{ form.subject.label }}<br>{{ form.subject() }}<br>
+        {{ form.title.label }}<br>{{ form.title() }}<br>
+        {{ form.content.label }}{{ form.content() }}<br>
+        {{ form.submit() }}
+    </form>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ myblog.title }}{% endblock %}
+
+{% block body %}
+    <h1 id="detail_title">Title: {{ myblog.title }}</h1>
+    <h2>Author: {{ myblog.author }}</h2>
+    <h3>Email: <a href="{{myblog.email}}">{{ myblog.email }}</a></h3>
+    <h3>Date: {{ myblog.date }}</h3>
+    <div>
+        <fieldset>
+            <legend>Content</legend>
+            <p id="doc-body">{{ myblog.content }}</p>
+        </fieldset>
+    </div>
+    <div>
+        <button><a href="{{url_for('blog.like', blog_id=myblog._id)}}">like</a></button>
+        <button><a href="{{url_for('blog.dislike', blog_id=myblog._id)}}">dislike</a></button>
+        <button><a href="{{url_for('blog.delete', blog_id=myblog._id)}}">delete</a></button>
+        <p><a href="#detail_title">back to top</a></p>
+    </div>
+{% endblock %}

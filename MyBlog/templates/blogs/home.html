@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %} home {% endblock %}
+
+{% block body %}
+    {% for blog in blogs %}
+        <div class="single-data">
+            <fieldset>
+                <legend><a href="{{url_for('blog.subject_works', subject_title=blog.subject)}}" title="Related blogs"><span class="home_subject">{{ blog.subject }}</span></a></legend>
+                <div>
+                    <p>
+                        <span class="home_title">{{ blog.title }}</span> by
+                        <a href="{{url_for('blog.author_works', author_name=blog.author)}}" title="Other works by the author"><span class="home_author">{{ blog.author }}</span></a> <hr>
+                        {{ blog.content[:120] }}... <a href="{{url_for('blog.detail', blog_id=blog['_id'])}}">read more</a>  <br>
+                        views: {{ blog.views }}
+                        <a href="{{url_for('blog.like', blog_id=blog._id)}}">like</a>: {{ blog.like }}
+                        <a href="{{url_for('blog.dislike', blog_id=blog._id)}}">dislike</a>: {{ blog.dislike }}
+                    </p>
+                </div>
+            </fieldset>
+        </div>
+    {% endfor %}
+{% endblock %}
